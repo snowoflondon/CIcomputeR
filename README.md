@@ -1,14 +1,27 @@
 # CIcomputeR
 
-CIcomputeR is a simple package containing functions to calculate the Chou-Talalay combination indices for drug combination data. 
+## Introduction
 
-References:
+`CIcomputeR` is a simple package containing functions to calculate the Chou-Talalay combination indices for drug combination data. 
+
+## References
 
 * https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4759401/
 * https://www.combosyn.com/CompuSyn%20Report%20Examples.pdf
 
-R sessioninfo():
+## Installation
 
+To install `CIcomputeR`, simply run:
+
+``` r
+install.packages('devtools')
+library(devtools)
+install_github("snowoflondon/CIcomputeR")
+```
+
+## R sessioninfo()
+
+``` r
 R version 4.0.5 (2021-03-31
 
 Platform: x86_64-apple-darwin17.0 (64-bit)
@@ -36,3 +49,4 @@ loaded via a namespace (and not attached):
 [17] tibble_3.1.1     lifecycle_1.0.0  crayon_1.4.1     purrr_0.3.4     
 [21] vctrs_0.3.7      glue_1.4.2       compiler_4.0.5   pillar_1.6.0    
 [25] generics_0.1.0   scales_1.1.1     pkgconfig_2.0.3 
+```
