@@ -1,0 +1,16 @@
+Conc1,Conc2,Response,Drug1,Drug2
+500,50,0.042,Magic drug A,Magic drug B
+400,40,0.122,Magic drug A,Magic drug B
+300,30,0.259,Magic drug A,Magic drug B
+200,20,0.532,Magic drug A,Magic drug B
+100,10,0.818,Magic drug A,Magic drug B
+500,0,0.024,Magic drug A,Magic drug B
+400,0,0.256,Magic drug A,Magic drug B
+300,0,0.633,Magic drug A,Magic drug B
+200,0,0.678,Magic drug A,Magic drug B
+100,0,0.932,Magic drug A,Magic drug B
+0,50,0.193,Magic drug A,Magic drug B
+0,40,0.244,Magic drug A,Magic drug B
+0,30,0.563,Magic drug A,Magic drug B
+0,20,0.75,Magic drug A,Magic drug B
+0,10,0.921,Magic drug A,Magic drug B
