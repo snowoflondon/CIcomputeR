@@ -19,6 +19,31 @@ library(devtools)
 install_github("snowoflondon/CIcomputeR")
 ```
 
+## Quick Run-Through
+
+```r
+drug1_name <- 'Magic drug A'
+drug2_name <- 'Magic drug B'
+
+mydata_combo <- data.frame('Conc1' = c(500, 400, 300, 200, 100), 'Conc2' = c(50, 40, 30, 20, 10), 'Response' = c(0.042, 0.122, 0.259, 0.532, 0.818))
+
+mydata_mono1 <- data.frame('Conc1' = c(500, 400, 300, 200, 100), 'Conc2' = rep(0, 5), 'Response' = c(0.024, 0.256, 0.633, 0.678, 0.932))
+
+mydata_mono2 <- data.frame('Conc1' = rep(0, 5), 'Conc2' = c(50, 40, 30, 20, 10), 'Response' = c(0.193, 0.244, 0.563, 0.750, 0.921))
+
+mydata <- rbind(mydata_combo, mydata_mono1, mydata_mono2)
+mydata$Drug1 <- drug1_name
+mydata$Drug2 <- drug2_name
+
+myed <- seq(from = 0.05, to = 0.95, by = 0.05)
+
+res <- computeCI(data = mydata, edvec = myed, frac1 = 500, frac2 = 50, viability_as_pct = FALSE)
+
+p1 <- CIplot(res, c(0.05, 0.95))
+
+p2 <- MEplot(data = mydata, viability_as_pct = FALSE)
+
+
 ## R sessioninfo()
 
 ``` r
