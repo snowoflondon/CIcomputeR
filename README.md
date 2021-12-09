@@ -19,6 +19,12 @@ library(devtools)
 install_github("snowoflondon/CIcomputeR")
 ```
 
+Clone this repository by running the following on terminal:
+
+``` bash
+git clone https://github.com/snowoflondon/CIcomputeR.git
+```
+
 ## Quick Run-Through
 
 ```r
