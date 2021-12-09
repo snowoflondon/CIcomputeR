@@ -16,6 +16,7 @@
 
 computeCI <- function(data, edvec, frac1, frac2, viability_as_pct){
   require(dplyr)
+  
   if (viability_as_pct == TRUE){
     data <- data %>% mutate(Response = Response/100)
   }
@@ -25,6 +26,7 @@ computeCI <- function(data, edvec, frac1, frac2, viability_as_pct){
   df2 <- data %>% filter(Conc1 ==0 & Conc2 !=0)
   dfc <- dfc %>% mutate(ConcC = Conc1 + Conc2)
 
+  #fit linear model to extract x-intercept and slope
   fitc <- lm(log((1/Response)-1) ~ log(ConcC), data = dfc)
   Dmc <- exp(-(fitc$coefficients[1])/(fitc$coefficients[2]))[[1]]
   fit1 <- lm(log((1/Response)-1) ~ log(Conc1), data = df1)
@@ -32,6 +34,7 @@ computeCI <- function(data, edvec, frac1, frac2, viability_as_pct){
   fit2 <- lm(log((1/Response)-1) ~ log(Conc2), data = df2)
   Dm2 <- exp(-(fit2$coefficients[1])/(fit2$coefficients[2]))[[1]]
 
+  #calculate Dm
   CIvec <- numeric()
   for (i in 1:length(edvec)){
     Dmcf <- Dmc*(((1-(1-edvec[i]))/(1-edvec[i]))^(1/fitc$coefficients[2][[1]]))
@@ -39,6 +42,7 @@ computeCI <- function(data, edvec, frac1, frac2, viability_as_pct){
     Dm2f <- Dm2*(((1-(1-edvec[i]))/(1-edvec[i]))^(1/fit2$coefficients[2][[1]]))
     Da <- Dmcf*(frac1/(frac1 + frac2))
     Db <- Dmcf*(frac2/(frac1 + frac2))
+    #calculate combination index
     CombIndex <- (Da/Dm1f) + (Db/Dm2f)
     CIvec[i] <- CombIndex
   }
