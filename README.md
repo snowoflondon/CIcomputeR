@@ -11,7 +11,7 @@
 
 ## Installation
 
-To install `CIcomputeR`, simply run:
+To install `CIcomputeR`, simply run in your R console:
 
 ``` r
 install.packages('devtools')
