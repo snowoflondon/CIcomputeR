@@ -43,6 +43,8 @@ p1 <- CIplot(res, c(0.05, 0.95))
 
 p2 <- MEplot(data = mydata, viability_as_pct = FALSE)
 
+```
+
 
 ## R sessioninfo()
 
