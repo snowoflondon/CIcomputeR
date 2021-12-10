@@ -55,7 +55,7 @@ p2 <- MEplot(data = mydata, viability_as_pct = FALSE)
 ## R sessioninfo()
 
 ``` r
-R version 4.0.5 (2021-03-31
+R version 4.0.5 (2021-03-31)
 
 Platform: x86_64-apple-darwin17.0 (64-bit)
 
