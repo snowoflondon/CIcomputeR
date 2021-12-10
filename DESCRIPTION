@@ -5,7 +5,7 @@ Version: 0.1.0
 Author: Brian Jungmin Park
 Maintainer: The package maintainer <brianjmpark@gmail.com>
 Description: This package takes drug combination assay data and computes Combination Indices as per Chou-Talalay's theorem.
-Depends: dplyr, ggplot2
+Depends: dplyr, ggplot2, tidyr
 License: Open-source
 Encoding: UTF-8
 LazyData: true
