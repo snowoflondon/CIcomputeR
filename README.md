@@ -6,7 +6,7 @@
 
 ## Web Version
 
-`CIcomputeR` is not available as an R Shiny web application:  https://brianjmpark.shinyapps.io/cicomputer/
+`CIcomputeR` is now available as an R Shiny web application:  https://brianjmpark.shinyapps.io/cicomputer/
 
 ## References
 
