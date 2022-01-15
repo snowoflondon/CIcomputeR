@@ -4,6 +4,10 @@
 
 `CIcomputeR` is a simple package containing functions to calculate the Chou-Talalay combination indices for drug combination data. 
 
+## Web Version
+
+`CIcomputeR` is not available as an R Shiny web application:  https://brianjmpark.shinyapps.io/cicomputer/
+
 ## References
 
 * https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4759401/
@@ -45,7 +49,7 @@ myed <- seq(from = 0.05, to = 0.95, by = 0.05)
 
 res <- computeCI(data = mydata, edvec = myed, frac1 = 500, frac2 = 50, viability_as_pct = FALSE)
 
-p1 <- CIplot(res, c(0.05, 0.95))
+p1 <- CIplot(CIdata = res, edvec = c(0.05, 0.95))
 
 p2 <- MEplot(data = mydata, viability_as_pct = FALSE)
 
