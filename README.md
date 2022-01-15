@@ -8,11 +8,6 @@
 
 `CIcomputeR` is now available as an R Shiny web application:  https://brianjmpark.shinyapps.io/cicomputer/
 
-## References
-
-* https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4759401/
-* https://www.combosyn.com/CompuSyn%20Report%20Examples.pdf
-
 ## Installation
 
 To install `CIcomputeR`, simply run in your R console:
@@ -54,6 +49,11 @@ p1 <- CIplot(CIdata = res, edvec = c(0.05, 0.95))
 p2 <- MEplot(data = mydata, viability_as_pct = FALSE)
 
 ```
+
+## References
+
+* https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4759401/
+* https://www.combosyn.com/CompuSyn%20Report%20Examples.pdf
 
 
 ## R sessioninfo()
